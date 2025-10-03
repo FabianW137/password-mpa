@@ -1,0 +1,1 @@
+import express from 'express'; const app=express(); app.set('view engine','ejs'); app.set('views','./views'); app.get('/',(req,res)=>res.render('index',{status:'ok'})); app.get('/about',(req,res)=>res.render('about')); app.listen(3000,()=>console.log('mpa 3000'));
