@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>TOTP</title></head>
+<body>
+  <h1>Zweiter Faktor</h1>
+  <% if(typeof error!=='undefined'){ %><p style="color:red"><%= error %></p><% } %>
+  <form method="post" action="/totp">
+    <input type="hidden" name="tmp" value="<%= tmp %>">
+    <input name="code" maxlength="6" required placeholder="123456">
+    <button>Einloggen</button>
+  </form>
+</body></html>

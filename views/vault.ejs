@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Vault</title></head>
+<body>
+  <h1>Vault (MPA)</h1>
+  <form method="post" action="/vault">
+    <input type="hidden" name="token" value="<%= token %>">
+    <input name="title" placeholder="Titel">
+    <input name="username" placeholder="Benutzer">
+    <input name="password" placeholder="Passwort">
+    <input name="url" placeholder="URL">
+    <input name="notes" placeholder="Notizen">
+    <button>+ Hinzufügen</button>
+  </form>
+  <hr>
+  <ul>
+    <% items.forEach(it=> { %>
+      <li><b><%= it.title %></b> — <%= it.username %> — <%= it.url || '—' %></li>
+    <% }) %>
+  </ul>
+</body></html>

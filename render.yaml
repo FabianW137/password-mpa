@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: pwm-mpa
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BACKEND_URL
+        value: https://<your-backend-on-render>.onrender.com
